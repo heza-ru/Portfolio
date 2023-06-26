@@ -17,7 +17,7 @@ function Loader({ isLoading, setIsLoading }: any) {
     const controls = animate(count, 100, { duration: 5 })
 
   return controls.stop
-}, [])
+}, [count])
 
   return (
     <AnimatePresence>
@@ -81,7 +81,7 @@ function Loader({ isLoading, setIsLoading }: any) {
           </motion.svg>
         </motion.div>
       )}
-      <motion.h1 className="number" style={{ display: rounded.get() >= 100 ? "none" : 1 }}>{rounded}</motion.h1>
+      <motion.h1 className="number" style={{ display: rounded.get() >= 100 ? "none" : "" }}>{rounded}</motion.h1>
     </AnimatePresence>
   );
 }

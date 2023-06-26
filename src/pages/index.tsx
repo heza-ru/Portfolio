@@ -28,21 +28,21 @@ function Index() {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <AnimatePresence mode="wait">
-      {showContent && (
-        <>
-          <Navbar />
-          <SocialIcons />
-          <Email />
-          <main>
-            <Hero />
-            <About />
-            <Experience />
-            <Projects />
-            <Contact />
-          </main>
-          <Footer />
-        </>
-      )}
+        {showContent && (
+          <>
+            <Navbar />
+            <SocialIcons />
+            <Email />
+            <main>
+              <Hero />
+              <About />
+              <Experience />
+              <Projects />
+              <Contact />
+            </main>
+            <Footer />
+          </>
+        )}
       </AnimatePresence>
       <Loader isLoading={isLoading} setIsLoading={handleLoaderLoaded} />
     </div>

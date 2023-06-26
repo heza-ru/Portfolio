@@ -18,7 +18,7 @@ function Contact() {
       <h2 className="contact-title">WHAT&apos;S NEXT?</h2>
       <h2 className="contact-sub-title">Get In Touch</h2>
       <p className="contact-text">
-        I'm currently looking for new experiences, think that I would suit your team? Whether you have a question or just want to say hi, I’ll
+        I&apos;m currently looking for new experiences, think that I would suit your team? Whether you have a question or just want to say hi, I&apos;ll
         try my best to get back to you!
       </p>
       <div className="contact-cta">

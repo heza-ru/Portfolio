@@ -2,7 +2,7 @@ import Button from "../components/Button";
 import Link from "next/link";
 import React from "react";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 
 function Hero() {
@@ -12,6 +12,21 @@ function Hero() {
     y: 0
   });
   const [cursorVariant, setCursorVariant] = useState("default");
+
+  const variants: Variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+    },
+    text: {
+      height: 150,
+      width: 150,
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      backgroundColor: "white",
+      mixBlendMode: "difference",
+    },
+  };
 
   useEffect(() => {
     const mouseMove = e => {
@@ -28,20 +43,7 @@ function Hero() {
     }
   }, []);
 
-  const variants = {
-    default: {
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
-    },
-    text: {
-      height: 150,
-      width: 150,
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
-      backgroundColor: "white",
-      mixBlendMode: "difference"
-    }
-  }
+  
 
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
@@ -75,7 +77,7 @@ function Hero() {
       </motion.h2>
       <motion.div
         className='cursor'
-        variants={variants}
+        variants={variants} 
         animate={cursorVariant}
       />
       <motion.h3

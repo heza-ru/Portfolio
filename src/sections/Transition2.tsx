@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const Transition = (OgComponent) => {
-    return () => (
+    const ComponentWithTransition = () => (
         <>
             <OgComponent />
             <motion.div
@@ -19,7 +19,12 @@ const Transition = (OgComponent) => {
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             />
         </>
-    )
-}
+    );
+
+    return ComponentWithTransition;
+};
+
+// Assign a display name to the component
+Transition.displayName = "Transition";
 
 export default Transition;
