@@ -1,0 +1,28 @@
+.loader {
+  color: var(--theme-color);
+  // background: #112240;
+  fill: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  height: 70vh;
+  //border-radius: 50%;
+  // height: 200vh;
+  // width: 200vw;
+  svg {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+.number {
+  color: var(--theme-color);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 10rem;
+  fill: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
